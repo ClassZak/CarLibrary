@@ -29,5 +29,4 @@ namespace CarLibrary
             MessageBox.Show("Упс!", " Ваш блок двигателя взорвался!");
         }
     }
-    public abstract class Автобус : Car { }
 }
