@@ -34,16 +34,13 @@ public class Program
     {
         try
         {
-            // Получить метаданные для типа Minivan.
             Type miniVan = asm.GetType("CarLibrary.MiniVan");
 
             // Создание экземпляра типа Minivan динамически.
             object obj = Activator.CreateInstance(miniVan);
             Console.WriteLine("Created a {0} using late binding!", obj);
-            // Получение информации о TurboBoost.
             MethodInfo mi = miniVan.GetMethod("TurboBoost");
-
-            // Вызвать метод ('null' означает, что параметров нет).
+            //Вызываем метод для объекта Activator.CreateInstance(miniVan);
             mi.Invoke(obj, null);
         }
         catch (Exception ex)
@@ -59,9 +56,8 @@ public class Program
             // Сначала получим метаданные для типа SportsCar.
             Type sport = asm.GetType("CarLibrary.SportsCar");
 
-            // Затем создадим экземпляр типа SportsCar динамически.
+            //Получаем объект метода от экземпляра CarLibrary.SportsCar, передаавая в Invoke свою "ссылку" и список аргументов
             object obj = Activator.CreateInstance(sport);
-            // Вызов метода TurnOnRadio() с аргументами.
             MethodInfo mi = sport.GetMethod("TurnOnRadio");
             mi.Invoke(obj, new object[] { true, 2 });
         }
