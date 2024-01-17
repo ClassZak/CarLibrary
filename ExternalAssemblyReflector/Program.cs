@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Reflection;
 using System.IO; // для использования FileNotFoundException.
 namespace ExternalAssemblyReflector
@@ -10,7 +7,7 @@ namespace ExternalAssemblyReflector
     {
         static void DisplayTypesInAsm(Assembly asm)
         {
-            Console.WriteLine("\n***** Типы в сборке *****");
+            Console.WriteLine($"\nТипы в сборке {asm.GetName().Name}:\n");
             Console.WriteLine("->{0}", asm.FullName);
             Type[] types = asm.GetTypes();
             foreach (Type t in types) Console.WriteLine("Type: {0}", t);
@@ -23,17 +20,16 @@ namespace ExternalAssemblyReflector
             Assembly asm = null;
             do
             {
+                
                 Console.WriteLine("\nВведите сборку для оценки");
                 Console.Write("или Q для выхода: ");
-                // Получение имени сборки.
                 asmName = Console.ReadLine();
-                // Пользователь хочет выйти?
                 if (asmName.ToUpper() == "Q")
                 {
                     break;
                 }
-                // Проверка загрузки сборки.
-                try
+                Console.Clear();
+                try//Пытаемся загрузить сборку
                 {
                     asm = Assembly.Load(asmName);
                     DisplayTypesInAsm(asm);
@@ -42,6 +38,7 @@ namespace ExternalAssemblyReflector
                 {
                     Console.WriteLine("Sorry, can’t find assembly.");
                 }
+                
             } while (true);
         }
     }
