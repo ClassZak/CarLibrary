@@ -10,15 +10,15 @@ namespace CarLibrary
     // Абстрактный базовый класс в иерархии.
     public abstract class Car
     {
-        public string PetName { get; set; }
-        public int CurrentSpeed { get; set; }
-        public int MaxSpeed { get; set; }
-        protected EngineState egnState = EngineState.engineAlive;
-        public EngineState EngineState
+        public enum MusicMedia
         {
-            get { return egnState; }
+            musicCd, // 0
+            musicTape, // 1
+            musicRadio, // 2
+            musicMp3 // 3
         }
-        public abstract void TurboBoost();
+
+
         public Car() { } //конструктор по умолчанию
         public Car(string name, int maxSp, int currSp)  // конструктор с параметрами
         {
@@ -26,5 +26,25 @@ namespace CarLibrary
             MaxSpeed = maxSp;
             CurrentSpeed = currSp;
         }
+
+        public abstract void TurboBoost();
+
+
+
+        public string PetName { get; set; }
+        public int CurrentSpeed { get; set; }
+        public int MaxSpeed { get; set; }
+
+        protected EngineState egnState = EngineState.engineAlive;
+        public EngineState EngineState
+        {
+            get { return egnState; }
+        }
+        public void TurnOnRadio(bool musicOn, MusicMedia mm)
+        {
+            if (musicOn) MessageBox.Show(string.Format("Jamming {0}", mm));
+            else MessageBox.Show("Quiet time...");
+        }
+
     }
 }
