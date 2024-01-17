@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpCarClient", "CSharpCa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalAssemblyReflector", "ExternalAssemblyReflector\ExternalAssemblyReflector.csproj", "{BAD04545-883A-443A-AC9C-C35CA6D0843D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LateBindingApp", "LateBindingApp\LateBindingApp.csproj", "{F428C449-5058-49EA-AA8C-20E942AE1A25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{BAD04545-883A-443A-AC9C-C35CA6D0843D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAD04545-883A-443A-AC9C-C35CA6D0843D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAD04545-883A-443A-AC9C-C35CA6D0843D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F428C449-5058-49EA-AA8C-20E942AE1A25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F428C449-5058-49EA-AA8C-20E942AE1A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F428C449-5058-49EA-AA8C-20E942AE1A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F428C449-5058-49EA-AA8C-20E942AE1A25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
