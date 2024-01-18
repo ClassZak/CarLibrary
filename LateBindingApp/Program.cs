@@ -22,7 +22,9 @@ public class Program
         }
         if (a != null)
         {
+            Console.WriteLine("Турбоускорение минивэна");
             CreateUsingLateBinding(a);
+            Console.WriteLine("Работа радио спортивного автомобиля");
             InvokeMethodWithArgsUsingLateBinding(a);
         }
         

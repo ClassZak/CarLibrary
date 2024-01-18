@@ -7,7 +7,7 @@ namespace ExternalAssemblyReflector
     {
         static void DisplayTypesInAsm(Assembly asm)
         {
-            Console.WriteLine($"\nТипы в сборке {asm.GetName().Name}:\n");
+            Console.WriteLine($"Сборка {asm.GetName().Name}:\n");
             Console.WriteLine("->{0}", asm.FullName);
             Type[] types = asm.GetTypes();
             foreach (Type t in types) Console.WriteLine("Type: {0}", t);

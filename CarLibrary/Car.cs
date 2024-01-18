@@ -11,7 +11,7 @@ namespace CarLibrary
     // Абстрактный базовый класс в иерархии.
     public abstract class Car
     {
-        public enum MusicMedia
+        public enum MusicMedia//Типы музыки
         {
             musicCd, // 0
             musicTape, // 1
@@ -20,8 +20,8 @@ namespace CarLibrary
         }
 
 
-        public Car() { } //конструктор по умолчанию
-        public Car(string name, int maxSp, int currSp)  // конструктор с параметрами
+        public Car() { }
+        public Car(string name, int maxSp, int currSp)
         {
             PetName = name;
             MaxSpeed = maxSp;
